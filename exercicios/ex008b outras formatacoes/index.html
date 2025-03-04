@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Codigo-fonte</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript. <br> Este codigo esta
+        envelopado com a tag CODE, que deixa a fonte monoespaçada, assim cada letra ocupa o mesmo espaço, evitando que
+        algumas letras fiquem ruins de se ver e selecionar. </p>
+    <p>Abaixo temos um exemplo de codigo em Python:</p>
+    <code>
+        num = int(input('Digite um numero'))
+        if num % == 0:
+            printf(f'O numero {num} é PAR')
+        else:
+            printf(f'O numero {num} é IMPAR')
+            printf('Fim do Programa')    
+    </code>
+    <p>Abaixo temos o mesmo exemplo de codigo, porem dentro de uma tag PRE, que indenta todas as linhas automaticamente.
+        Tambem é possivel tabular o bloco do codigo inteiro ou algumas partes manualmente posteriormente da maneira
+        desejada:</p>
+    <pre>
+        <code>
+num = int(input('Digite um numero'))
+if num % == 0:
+    printf(f'O numero {num} é PAR')
+else:
+    printf(f'O numero {num} é IMPAR')
+    printf('Fim do Programa')    
+        </code>
+    </pre>
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de uma amigo: <q>o computador é um burro muito rapido</q></p>
+    <p>Usando a tag Q, as aspas são colocadas automaticamente numa citação, porem de maneira semântica e não apenas
+        adicionando aspas simples.</p>
+    <h2>Citações completas</h2>
+    <p>Segundo José Augusto N. Z. Manzano, no seu livro Guia de Orientação e Desenvolvimento de Sites:</p>
+    <blockquote
+        cite="https://www.google.com.br/books/edition/Guia_de_Orienta%C3%A7%C3%A3o_e_Desenvolvimento_d/1YuwDwAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover">
+        As tags são geralmente usadas em duplas envolvendo o objeto que será tratado.
+    </blockquote>
+    <p>Aqui acima, usando a tag BLOCKQUOTE, criamos uma citação que fica destacada no texto, e adicionando a tag CITE
+        dentro da BLOCKQUOTE, podemos inserir o endereço do site de referencia, porem isso nao adiciona ao site nenhum
+        link clicavel para o usuario, mas é internamente importante para o site.</p>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="Hypertext Markup Language">HTML</abbr>e <abbr
+            title="Cascading Style Sheets "></abbr>CSS</p>
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">.Estou aprendendo HTML.</bdo> Texto invertido usando a tag BDO com o parametro "rtl", right to
+        left, que inverte a direção das letras, usando lrt, o texto fica normal.</p>
+
+ 
+
+</body>
+
+</html>

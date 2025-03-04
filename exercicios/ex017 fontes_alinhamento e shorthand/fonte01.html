@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body >
+    <h1>Trabalhando com fontes</h1>
+    
+    <h2>Anatomia das Fontes</h2>
+    <p>Segue abaixo algumas imagens que mostram a anatomiadas fontes, que foram mostradas na aula anterior.</p>
+    <style></style>
+    <img src="imagens/20240705_141511.jpg"  width="600px" alt="anatomia das fontes"><br>
+    <img src="imagens/20240705_141533.jpg" width="600px" alt="anatomia das fontes"><br>
+    <h2>Familias e Tipos de Fontes</h2>
+    <p>O mais importante sobre as fontes de um site é a compatibilidade. Alguns dispositivos como tv's, por exemplo, não tem compatibilidade com todas as fontes. Por isso definimos uma 'combinação segura' como fonte do nosso site. Definimos entao o parametro FONT FAMILY, assim podemos escolher varias fontes, que serão usadas de acordo coma compatibilidade do dispositivo e navegador. A primeira fonte escolhida tera prioridade, se não houver compatibilidade para ela, a proxima sera usada e assim por diante.</p>
+    <p>Colocamos por ultimo um dos tipos de fonte generico, que podem ser tres: sans serif, serif e monospace. Quando definimos uma fonte generica, o proprio navegador ira escolher uma fonte compativel com ele que seja da mesma font family.</p> 
+    <p>Quando digitamos o parametro FONT FAMILY, o proprio VSCode ira nos oferecer varias familias, cada com sua fonte generica. Podemos tambem usar o site <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php">CSS WEB SAFE FONTS - W3Schools</a>, onde teremos exemplos de varias familias e safe combinations.</p>
+    <h2>Tamanho das Fontes</h2>
+    <p>existem dois tipo de medidas de fontes: Medidas Absolutas e Medidas Relativas.</p>
+    <h3>Medidas Absolutas</h3>
+    <p><ul>
+        <li>cm: centimetro</li>
+        <li>mm: milimetro</li>
+        <li>in: polegada (inch)</li>
+        <li>px: pixel</li>
+        <li>pt: ponto</li>
+        <li>pc: paica</li>
+    </ul></p>
+    <h3>Medidas Relativas</h3>
+    <ul>
+        <li>em: altura relativa ao M maiusculo</li>
+        <li>ex: altura relativa ao X maiusculo</li>
+        <li>rem: root em, altura relativa ao M da fonte que esta configurada no body</li>
+        <li>vw: view width, altura relativa à largura da view port (largura da tela)</li>
+        <li>vh: view height, altura relativa à altura da view port (altura da tela)</li>
+        <li>%: porcentagem</li>
+    </ul>
+    <h3 style="background-color: rgb(236, 136, 136);">IMPORTANTE</h3>
+    <p style="background-color: rgb(236, 136, 136);"> Devido a compatibilidade e apresentação de cada tela, é recomendado pela W3C usar apenas PX (pixel) e EM (altura do M), e destes, o tamanho EM é o mais adaptavel a qualquer tipo de tela, pois usa a porcentagem do tamanho da fonte padrão, sendo portanto a melhor escolha para criação de um site.</p>
+    <h3>Exemplos de Uso e Observações</h3>
+    <p style="font-size: 16px;"> Exemplo de tamanho PX. 16 px é o tamanho padrão para fontes e 1em é igual a 16px.</p>
+    <p style="font-size: 1em;"> Exemplo de tamanho EM. Novamente, 1em é igual a 16px. </p>
+    <p style="font-size: 1in;"> Exemplo de tamanho in. Uma polegada (equivale a 2,54cm).</p>
+    <p style="font-size: 0.5in;"> Exemplo de tamanho in. Meia polegada. Usamos ponto, e não virgula para representar os tamanhos das letras no codigo. EX.: 0.5in</p>
+    <p style="font-size: 5mm;"> Exemplo de tamanho mm. Esta letra tem 5mm.</p>
+    <p style="font-size: 11pt;"> Exemplo de tamanho pt. A altura em Pontos é uma medida tipografica e é utilizada nos editores de texto, como Word e Wordpad.</p>
+    <p style="font-size: 1pc;"> Exemplo de tamanho paica.</p>
+    <p style="font-size: 1ex;"> Exemplo de tamanho ex.</p>
+    <p style="font-size: 1rem;"> Exemplo de tamanho rem. Este tamanho utiliza o padrão da fonte utilizada no body e portanto este tamanho aqui esta com o tamanho da fonte SEGOE UI (acredito que seja 16px tambem).</p>
+    <p style="font-size: 2vw;"> Exemplo de tamanho vw. Aqui usamos 10vw.</p>
+    <p style="font-size: 2vh;"> Exemplo de tamanho vh. Aqui usamos 20vh.</p>
+    <p style="font-size: 80%;"> Exemplo de tamanho em %. Esta letra esta com o tamanho em 80%.</p>
+    
+
+</body>
+</html>

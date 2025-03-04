@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+        p#links {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+
+    <h2>Pseudoclasses</h2>
+    <p>Pseudoclasses servem para configurar o estado de um elemento. Aqui, no caso, ao elemento DIV. </p>
+    <h2>Explicações</h2>
+    <p>Analisando o codigo fonte vemos que dentro do STYLE, no bloco de codigo seguinte:</p>
+        <code>div {
+            display: inline-block;
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }</code>
+    <p>Temos a edição do elemento (ou seletor) DIV. Ate aqui, nada demais.</p>
+    <p>Ja neste bloco de codigo:</p>
+    <code>
+        div:hover {
+            background-color: yellow;
+        }
+    </code>
+    <p>Temos a configuração da pseudoclasse, no caso, a nossa HOVER (flutuar, pairar). Esta pseudoclasse configura um comportamento quando colocamos o mouse em cima de um determinado elemento, a DIV, neste caso. Assim, quando passamos o mouse o background-color ficara em amarelo.</p>
+    <p>Observação: Para configurar um i]ID, usamos # (hashtag) na parte do CSS, para configurar uma CLASS, usamos . (ponto), e para configurar uma pseudoclasse usamos : (dois pontos).</p>
+    <p>Acessando o link abaixo, temos o exemplo de hover mais elaborado, onde as coisas ficam um pouco mais complicadas.</p>
+    <p id="links"><a href="hover.html" target="_blank">Exemplo de Hover</a></p></p>
+</body>
+</html>

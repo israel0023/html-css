@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Angel';
+            src: url('fonts/angelwish.ttf'), url('fonts/angelwish.otf');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        body {
+            font-family: Angel, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+        h1 {
+            font-family: 'Angel', Times, serif;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Explicação do Exercício</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi eos exercitationem optio, aperiam voluptate debitis quaerat laborum voluptates a labore quod tempora hic officiis laboriosam vero voluptas fugit minima.</p>
+    <p style="font-family: Arial, Helvetica, sans-serif;  font-size: 20px;">>Neste exercícioa sintaxe do CSS mudou em relação ao video do Prof. Guanabara.</p>
+    <Fiz style="font-family: Arial, Helvetica, sans-serif;  font-size: 20px;">Fiz o exercício do jeito que ele mostrou e não funcionou. Descobri então que não funciona com o tipo de arquivo otf, provavelmente porque não deve haver compatibilidade do Chrome com otf. Depois de colocar apenas o tipo ttf de fonte, eu tambem exclui a declaração do FORMAT.</p>
+   
+
+    <h2>Tipos de Format</h2>
+    <p style="font-family: Arial, Helvetica, sans-serif;  font-size: 20px;">Observação: NÃO É MAIS NECESSARIO O USO DESTES FORMATOS NO FONTFACE POIS O CSS ATUALIZOU E RECONHECE AUTOMATICAMENTE</p>
+    <p>
+        <ul>
+        <li>opentype (otf)</li>
+        <li>truetype (ttf)</li>
+        <li>embedded-opentype</li>
+        <li>truetype-aat (Apple Advanced Typography)</li>
+        <li>svg</li>
+    </ul></p>
+</body>
+</html>

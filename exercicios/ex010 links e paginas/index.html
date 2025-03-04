@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Acesse aqui o meu <a href="https://github.com/israel0023/" target="_blank" rel="external">repositorio publico do github</a></p>
+    <p>Neste exemplo criamos um link externo com a tag A (A HREF). Após o link do site externo, segue a tag TARGET="_blank", que abre uma nova guia para este link, evitando que o usuario saia da sua pagina. Apos TARGET, temos a tag REL="external", que indica internamente ao nosso site que este é um link externo. Isso serve para mecanismos de busca que vasculham nosso site obter informações e indexar o conteudo do site e dos links externos na busca.</p>
+    <br>
+    <h2>Links de Patrocinio ou Não Totalmente Confiaveis</h2>
+    <p>Este conteudo teste fala sobre a matéria <a href="https://github.com/israel0023/" target="_blank" rel="nofollow">link teste</a></p>
+    <p>Aqui a nossa tag REL tem como parametro "nofollow". Este parametro ira indicar internamente que não confiamos totalmente no site do link, ou seja, indicando aos mecanismos de busca para que não indexem  este link no conteudo da busca pois não damos aval ao conteudo do site em questão.</p>
+    <br>
+    <h2>Usando links internos</h2>
+    <p>Esta é a primeira pagina do site. Se voce quiser pode acessar tambem a <a href="pag002.html" rel="next">pagina 2</a></p>
+    <p>Voceê tambem pode acessar a nossa pagina de <a href="noticias/pag003.html" target="_self">notícias</a></p>
+    <p>Para criar o link para uma pasta acima, como é o caso do link de volta para a pag index, usamos o padrão do Terminal de Linux, neste caso 'pasta acima' usamos comando ../. Exemplo: A HREF="../index.html"</p>
+    <h1>Links para download</h1>
+    <p>Aqui foi criada uma lista com 2 linhas, cada uma com um download. A tag A (A HREF) tambem é usada para links de download, porem preciamos usar junto a tag TYPE usando o parametro de 'media type' com a extensão correspondente ao arquivo, o link baixa o arquivo diretamente.</p>
+    <p>Cada arquivo possui um media type, que pode ser encontrado no site da <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="nofollow"><abbr title="Internet Assigned Numbers Authority">IANA</abbr></a> </p>
+    <p>Usei tambem a tag DOWNLOAD="10 - Ligações em toda parte.rar", como pode-se ver com o nome do arquivo como parametro, porem não surtiu efeito e tambem não fez falta quando a removi.</p>
+    <ul>
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixar livro em pdf</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.rar"  type="application/vnd.rar">Baixar livro compactado rar</a></li>
+    </ul>
+    <!-- download="10 - Ligações em toda parte.rar" -->
+</body>
+</html>

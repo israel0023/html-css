@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+
+        div:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <P>Fim do exemplo.</P><br>
+    <h2>Explicações</h2>
+    <p>Analisando o CSS desta pagina temos 3 blocos de codigo que se complementam. Sendo eles:</p>
+    <code>
+       <p style="color: red;">div > p {
+            display: none;
+        }</p> 
+
+        <p style="color: green;">div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+        </p>
+
+       <p style="color: blue;">div:hover {
+            color: blue;
+        }</p>
+    </code><br>
+    <h2>Explicanado cada um individualmente temos:</h2>
+    
+    <p>Este bloco de codigo abaixo foi o primeiro bloco que fiz, que apenas cria a HOVER azul no texto 'passe o mouse aqui'.</p>
+    <code style="color: blue;">div:hover {
+        color: blue;
+    }</code><br><br>
+    <p>Em seguida,criei o bloco abaixo e nele, com a tag NONE dentro da tag DISPLAY, configuramos que o P (paragrafo) dentro da DIV não ira aparecer. Pois "div > p" significa que o paragrafo é filho do DIV</p>
+    <code style="color: red;">div > p {
+        display: none;
+    }</code><br><br>
+    <p>E por ultimo criamos o bloco:</p>
+    <code style="color: green;">div:hover > p{
+        display: block;
+        color: white;
+        background-color: red;
+        width: 300px;
+    }</code>
+    <p>Onde novamente configuramos o P (paragrafo) dentro da DIV e dizemos que ele tambem é filho da HOVER em "div:hover > p".</p><p>A tag DISPLAY aqui configura que ele ira aparecer dentro da HOVER 'passe o mouse aqui' e o restante das tags configura a aparencia do paragrafo quando ele aparecer.</p>
+    <p style="text-align: center;"><a href="pseudoclasse.html" rel="prev">Voltar</a></p>
+</body>
+</html>

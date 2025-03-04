@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: rgb(139, 137, 137);
+            padding: 3px;
+            box-shadow: 7px 6px 6px black;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav >a:hover {
+            color: darkgoldenrod;
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+        }
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside {
+            background-color: rgb(139, 137, 137);
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Tecnologia - HTML CSS</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Exercicio para Pratica de Construção de Sites</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, dicta mollitia corporis perferendis itaque et veniam magni suscipit, veritatis minus vero soluta totam dignissimos adipisci iusto eligendi officiis ad voluptatem.</p>
+                <aside>
+                    <p>Artigo escrito por Israel Oliveira dos Santos</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por IsraelTech</p>
+    </footer>  
+    
+    <header>
+        <h2>Explicaçõs</h2>
+            <h3>Criando sombras</h3>
+                <p>Utilizar a tag 'BOX-SHADOW'. Em seguida ir para o devtools e clicar no botaozinho para visualizar um editor de sombras que te mostra a pré-visualização da sombra e alterar como quiser, em seguida é so copiar a configuração para o codigo.</p>
+                <code>
+                box-shadow: 7px 6px 6px black;
+                </code>
+                <h3>Arredondamento de caixas</h3>
+                <p>Usando a tag 'BORDER-RADIUS' podemos arredondar as caixas e criar uma certa sofisticação ao estilo. Esta tag funciona como todas que tem 4 lados, onde usando sentido horario (cima, direita, baixo, esquerda) criamos um shorthand que define todos os valores para os lados.</p>
+                <code>
+                border-radius: 10px 20px 30px 40px;
+                </code>
+            <h3>Criando um circulo</h3>
+                <p>Para criar o circulo perfeito que vemos no final da pagina, Prof Guanabara primeiro criou uma div no final do codigo, dando a ela um ID chamado bola. Em seguida foi no codigo de estilo CSS e setou a div #bola com altura e largura iguais, cor branca e por fim, setou um border-radius de 50%.</p>
+                <p style="color: blue;">Com este border-radius ele tambem mostrou como usar porcentagem como valor para algum elemento ou configuração.</p>
+                <code>
+                div#bola { <br>
+                height: 100px; <br>
+                width: 100px; <br>
+                margin: 20px; <br>
+                background-color: white; <br>
+                border-radius: 50%; <br>
+                 } <br>
+                <br>
+                div id="bola"> /div
+        </code>
+    </header>
+        <div id="bola"></div>
+</body>
+</html>

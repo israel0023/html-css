@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes com Google Fonts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-family: 'Work Sans', Verdana, sans-serif;
+            font-size: 1em;
+            color: black;
+        }
+        h1 {
+            font-family: 'Pacifico', 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes com Google Fontes</h1>
+    <p>Passo a passo: Acessar o site do google fonts, escolher a fonte, clicar em get font, depois em get embed code, copiar o @import sem a tag STYLE e colar logo abaixo da tag STYLE do CSS do seu codigo. O @import é uma REGRA. Nunca colar a REGRA dentro do SELETOR, que são os elementos que voce quer mudsar no conteudo do seu html (body, h1, h2, p, etc.).</p>
+    <p>Por ultimo, dentro da sua tag FONT-FAMILY voce deve declarar o nome da fonte que voce importou, sem esquecer de encapsular com aspas simples.</p> 
+        <p>Ex.: 'Work Sans'.</p>
+        <p>Exemplo do codigo utilizad aqui (sem tabulação e paragrafo):
+            <p>
+            <code>
+                title>Fontes com Google Fonts /title>
+    style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            font-family: 'Work Sans', Verdana, sans-serif;
+            font-size: 1em;
+            color: black;
+        }
+        h1 {
+            font-family: 'Pacifico', 'Trebuchet MS', sans-serif;
+        }
+    /style></p>
+            </code>
+        </p>
+</body>
+</html>

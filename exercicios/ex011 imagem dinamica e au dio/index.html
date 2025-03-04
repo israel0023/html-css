@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <p>A imagem abaixo, na verdade não é uma imagem só, são 3 imagens (P,M e G) que se adapatam ao tamanho da tela ou tamanho da janela aberta no navegador e tambem se adapta a varios tipos de dispositvos como celular, pc ou tv. Caso seu site não seja bem adapatado  aos varios tipos de telas e dispositivos, os usuarios sentiram dificuldade em usa-lo e isso aumentara bouce rate no google, que é  taxa de de users que desistem do seu site rapidamente, o que faz com que o mesmo não seja recomendado pelo google.</p>
+    <p>A tag usada para criar esta adaptabilidade é a PICTURE e dentro dela a tag SOURCE e tambem IMG. Como no exemplo abaixo:</p>
+    <p>
+        picture>
+            source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"><br>
+            source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"><br>
+            img src="imagens/foto-g.png" alt="imagem flexivel">
+        /picture>
+    </p>
+    <p>A primeira tag criada dentro da tag PICTURE é a IMG, onde é colocada a imagem padrão, em seguida a tag SOURCE:MEDIA:TYPE é criada (sempre acima) e nela são postas as imagens que serão adaptadas em outros tamanhos, juntamente com um parametro que dita o tamanho maximo (ou minimo)que a imagem padrão pode atingir, caso este tamanho seja ultrapassado, a imagem seguinte a substituira, se adapatando melhor a tela do dispositivo ou largura da janela.</p>
+    <p>Caso a ordem das imagens seja colocada de forma errada na tag PICTURE (aqui no caso, da maior para a menor) este recurso não ira funcionar.</p>
+
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+    <h1>Reproduzindo audio</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5.</p>
+    <p>Exemplo 1:</p>
+    <audio src="midia/02. The Gun.mp3" controls autoplay></audio>
+    <p>Exemplo 2:</p>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. 
+        <a href="midia/guanacast-33.mp3">Clique aqui para baixar o audio mp3</a></p>
+    </audio>
+    <p>As informações abaixo se referem ao codigo fonte.</p>
+    <p>No exemplo 1, o audio foi colocado de maneira simples, onde vc apenas insere a tag AUDIO e indica o arquivo. A tag CONTROLS mostra para o usuario os controles de play/pause e a linha de tamanho do audio.</p>
+    <p>Já no exemplo 2, existem mais parametros para melhor usabilidade no site. Primeiramente inserimos tag AUDIO e apagamos a tag SRC que ja vem predefinida, assim vamos colocar a nossa propria tag SOURCE:SRC. Depois colocamos mais algumas tags que servem de parametos para a tag AUDIO. São elas:</p>
+    <p>A tag AUTOPLAY faz com que o audio seja reproduzido automticamente, porem nao funcionou por aqui, pois isso depende do navegador utilizado</p>
+    <p>A tag LOOP repete o som quando ele termina, funciona junto coma tag AUTOPLAY.</p>
+    <p>Temos aqui 3 tags SOURCE:SRC, cada uma com um tipo de arquivo diferente, para que o site reproduza cada uma de acordo coma  compatibilidade do navegador utilizado. Junto com ela temos que inserir tambem o mediatypoe correspondente (tag TYPE), como quando inserimos downloads ao site. Os arquivos serão carregados na ordem que aparecem de cima para baixo, ou seja, aqui vai ser primeiro mp3, depois ogg, depois wav. Deste arquivos, apenas o mp3 tem um arquivo de audio real, o restante esta aqui para fins de exmeplo.</p>
+    <p>Obs.: O formato wav é muito pesado e não deve ser inserido, esta aqui apoenas para fins de exemplo.</p>
+    <p>Depois inserimos uma mensagem se nenhum arquivo puder ser reproduzido, contendo tambem um link para download do audio.</p>
+    <p>Por fim, inserimos mais alguns parametros, como o PRELOAD, que nos da mais 3 opções de parametro: </p>
+    <p>Auto: que é o padrão. Vai fazer o navegador considerar que o site esta carregado apenas depois de carregar todo o audio tambem, por isso é um pouco perigoso, pois deixa o site lento.</p>
+    <p>Metadata: que carrega apenas alguns dados do audio e carrega o audio em si só depois que se clica em play.</p>
+    <p>None: que não carrega nenhuma informação do audio nem ele mesmo.</p>
+
+</body>
+</html>

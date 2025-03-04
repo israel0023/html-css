@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <p>Este video esta hospedado no meu proprio servidor (computador).</p>
+    <p>Forma Simples</p>
+    <video src="midia/meuvideo7859kb.mp4" width="600" controls loop></video>
+    <p>Exemplo de codigo utilizado.</p>
+    <p>video src="midia/meuvideo7859kb.mp4" width="600" controls loop></video></p>
+    <p>Fim do exemplo.</p>
+    <br>
+    <br>
+    <p>Forma Otimizada</p>
+    
+    <video controls width="600" poster="midia/thumb_meuvideo.png" loop>
+        <source src="midia/meuvideooriginal.mp4" type="video/mp4">
+        <source src="midia/meuvideo7859kb.mp4" type="video/mp4">
+        <source src="midia/meuvideo.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de videos.</p>
+    </video>
+    <p>Exemplo do codigo utilizado</p>
+    <p>video controls width="600" poster="midia/thumb_meuvideo.png" loop>
+        source src="midia/meuvideooriginal.mp4" type="video/mp4">
+        source src="midia/meuvideo7859kb.mp4" type="video/mp4">
+        source src="midia/meuvideo.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de videos./p>
+    /video</p>
+    <p>Fim do exemplo.</p>
+    <br>
+
+    <h1>Inserindo (ou Incorporando) Videos do Youtube</h1>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg?si=VzNPLMkl8yVt-m9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <p>O codigo para o video acima ja vem pronto, é preciso apenas copiá-lo da pagina do Youtube, que fica disponibilizado clicando em 'compartilhar', depois em 'incorporar'.</p>
+    <p>Abaixo ha um print da tela de incorporação do video disponibilizado pelo Youtube. Alem do codigo, ha opções para escolher onde o video irá começar, os controles do video e modo de privacidade aprimorada.</p>
+
+
+    <br>
+     <p>Abaixo temos o mesmo video sem os controles e com a opção de 'privacidade aprimorada' ativada. Que muda o botão de compartilhamento para apenas 'copiar link'.</p>       
+     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FdE5G95B7Mg?si=7mwUXnNCzeHeBU3d&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <p>Abaixo temos uma imagem de exemplo de incorporação do Youtube</p>
+     <img src="midia/Captura de tela 2024-06-23 124409.png" width="500" alt="tela incorporação de video Youtube">
+
+     <br><br>
+     <h1>Inserindo Videos do Vimeo</h1>
+     <p>Abaixo temos o video incorporado do Vimeo. Este serviço de videos oferece mais informações e controles para incorporação em sites.</p>
+     <p><iframe src="https://player.vimeo.com/video/76123850?h=05b5926baa" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <p><a href="https://vimeo.com/76123850">Irfan--Animation Reel--2013</a> from <a href="https://vimeo.com/irfandoanimation">Irfan</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+        <p>Abaixo temos um print como exemplo de incorporação de videos do Vimeo, onde vemos as varias ferramentas de incorporação que ele oferece.</p>
+        <img src="midia/Captura de tela 2024-06-23 151100.png" alt="incorporação de video do Vimeo" width="500">
+</body>
+</html>

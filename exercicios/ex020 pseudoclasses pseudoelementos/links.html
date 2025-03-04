@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }    
+        
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: blueviolet;
+        }
+
+        a::before {
+            content: '✪';
+        }
+
+        a::after {
+            content: '✪';
+            text-decoration: none;
+            font-weight: normal;
+        
+        }
+
+        .especial {
+            background-color: rgb(235, 160, 160);
+        }
+
+
+        .especial::before {
+            content:'☢ ☠' ;
+        }
+
+        .especial::after {
+            content:'☠ ☢' ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <h2>Links do Exercico do Guanabara </h2>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio do Github</a></li>
+        <li><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank">Site do curso em Video</a></li>
+    </ul>
+
+    <h2>Links do meu exemplo de Class</h2>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio do Github</a></li>
+        <li><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" class="especial">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank">Site do curso em Video</a></li>
+    </ul>
+
+
+    <h1>Explicação</h1>
+    <h2>Mais exemplos de pseudoclasse</h2>
+    <p><code>
+        a:visited {
+            color: darkred;
+        }
+    </code><br>
+    <code>
+        a:active {
+        color: blueviolet;
+        }</code>
+
+    </p>
+    <h2>Pseudoelementos</h2>
+    <p>Pseudoelementos são como psudoclasses, mas modificam o conteudo periferico (ao lado) do elemento em questão. Pseudoelementos são representados com dois 'DOIS PONTOS' (::) apos o elemento aser modificado. Exemplo:</p>
+    <code> a::after {
+        content: '[link]';
+        text-decoration: none;
+        font-weight: normal;
+        color: darkgray;}</code><br><br>
+
+    <p>Porem depois modifiquei para:</p>
+    <code>
+        a::before {
+            content: '✪';
+        }
+    </code><br>
+    <code> a::after {
+            content: '✪';
+            text-decoration: none;
+            font-weight: normal;
+        
+        }</code>
+       
+    <p>Depois criei a classe .especial mostrando que anexado a ela tambem pode-se colocar pseudoelementos (::after, ::before). Dessa forma podendo criar uma edição diferente apenas para os links que eu quis destacar nesta pagina tendo simbolos diferentes e um cor de fundo avermelhada.</p>
+    <code>.especial {
+        background-color: rgb(235, 160, 160);
+    }</code><br>
+    <code>
+        
+        .especial::before {
+            content:'☢ ☠' ;
+        }
+    </code><br>
+    <code>
+
+        .especial::after {
+            content:'☠ ☢' ;
+        }</code>
+
+    <h2>Sempre bom lembrar...</h2>
+
+    <p><ul>
+        <li># = id</li>
+        <li>. = classe</li>
+        <li>: = pseudoclasse</li>
+        <li>:: = pseudoelemento</li>
+        <li>> = de pai para filho</li>
+
+    </ul></p>
+    
+</body>
+</html>

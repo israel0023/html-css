@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1 {
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+
+            padding: 10px 20px;
+
+            margin: 10px auto 20px auto;
+            
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+        }
+
+        a {
+            display: block;
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplode caixa box-level</h1>
+    <p>Parágrafos também sao exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos verc como tudo isso funciona.</p>
+    <h2>Explicações</h2>
+    <p>As imagens abaixo demonstram as partes que formam a configuração de uma caixa.</p>
+    <img src="imagens/border_padding500p.png" alt="explicação borda">
+    <img src="imagens/margin500.png" alt="explicação margem">
+    <img src="imagens/outline(cxontornoOUtracejado)500.png" alt="explicação outline">
+    <img src="imagens/box-level_e_inline-level500p.png" alt="explicação box-level e inline-level">
+    <img src="imagens/exemplos_box-level_inline-level500p.png" alt="exemplos de box-level e inline-level">
+    <p style="color: rgb(43, 64, 226); font-size: 1.3em;">Importante: Um elemento 'H1' é do tipo box-level e um elemento 'A' seria do tipo inline-level, mas podemos transformar um H1 em inline-level e vice-versa usando a tag "display", como mnostra a linha de codigo desta pagina para o elemento A, que foi transformado em box-level. Isto é util para mudar o tamanho de espaço que a caixa do elemento ocupa. Tambem pode-se usar o parametro inline-block, que sera inline, mas vai ter tambem caracteristicas de bloco (box-level).</p>
+    <p>Exemplo:</p>
+        <code>
+            h1 {<br>
+                display: inline;<br>
+            } <br>
+<br>
+            a { <br>
+                display: block; <br>
+            }
+        </code>
+    
+    <br><br>
+
+    <p>A imagem abaixo mostra as configurações do navegador para as caixas de cada elemento (h1, p, etc). Eu acesso esta tela clicando com botão direito do mouse no navegador e clicando depois em "inspecionar" e indo na guia "elementos". Ou acessando as opções do navegador e indo em "ferramentas para desenvolvedores".</p>
+    <img src="imagens/exemplos modelos de caixas no navegador na prtica1000p.png" alt="Exemplos de modelos de caixa direto no navegador">
+    <br><br>
+    <p>Esta aba com os elementos da caixa é mais do que apenas para simples conferencia. Passando o mouse acima dos elementos da configuração da caixa, vemos uma seleção que destaca o item da caixa na pagina e, mais importante, clicando no valor descrito do item (height: 300px; por exemplo), podemos alterar este valor e a pagina mostra automaticamente como ficará o tamanho da caixa com esta alteração, porém sem alterar o valor dentro do código.</p>
+    <p>Isto facilita demais a visualização e edição dos elementos previamente, permitindo que vejamos como ficará a pagina antes de editarmos, poupando tempo gasto com muitas alterações e correções ate o resultado final.</p>
+    <p>Abaixo temos o codigo desta pagina para demonstrar que para termos acesso ao item de caixa que queremos visualizar (height,weight, border, padding, etc) na aba "inspecionar", precisamos adiciona-lo ao codigo, pois estes itens de caixa não aparecem automaticamente quando abrimos a aba "inspecionar".</p>
+    <p>
+    <code>
+        style <br>
+            h1 {<br>
+                background-color: lightgray;<br>
+                height: 300px;<br>
+                width: 300px;<br>
+                border-width: 10px; <br>
+                border-style: solid; <br>
+                border-color: darkslategray; <br><br>
+    
+                padding-top: 10px; <br>
+                padding-right: 10px; <br>
+                padding-bottom: 10px; <br>
+                padding-left: 10px; <br>
+            } <br>
+    
+        /style <br>
+    </code></p>
+    <p>Nota importante: User Agent se refere ao navegador.</p>
+    <h2>Continuando as explicações...</h2>
+    <p>Para que a caixa com seu texto fique sempre no centro do navegador, precisamos usar o parametro 'auto' na tag 'margin'. "margin: auto;"</p>
+    <p>As configurações 'margin', 'padding' e 'border' dividem-se em top, right, bottom e left. Onde cada uma dessas partes pode ter um tamanho ou volume diferente. </p>
+    <p>Podemos simplificar a escrita destes blocos de codigo. Como no exemplo de codigo acima, temos: </p>
+    <code>
+                padding-top: 10px; <br>
+                padding-right: 10px; <br>
+                padding-bottom: 10px; <br>
+                padding-left: 10px; <br>
+    </code>
+    <p>Se todos os valores forem iguais, podemos simplificar este bloco com apenas uma linha de codigo:</p>
+    <code>
+        padding: 10px;
+    </code>
+    <p>Que tambem pode ser escrito desta forma mais extensa:</p>
+    <code>
+        padding: 10px 10px 10px 10px;
+    </code>
+    <p>Podemos tambem usar um valor para o top e bottom, e outro para right e left. Sendo o primeiro valor para top e bottom e o segundo para as laterais da caixa:</p>
+    <code>
+        padding: 10px 20px;
+    </code>
+    <p>Que varia tambem para:</p>
+        <code>
+            margin: 10px auto 20px auto;
+        </code>
+    <p>Onde top e bottom tem valores definidos, e as laterais da caixa se ajustam automaticamente para ficar sempre no meio do navegador.</p><br>
+    <p>Ja para o item "outline", as configurações são diferentes, mas é basicamente parecido.</p>
+    <p style="color: rgb(43, 64, 226); font-size: 1.3em;">Importante: Devemos sempre escrever o codigo destas configurações de caixa respeitando a ordem TOP, RIGHT, BOTTOM, LEFT (sentido horario). Pois assim tambem lembraremos como é simplificado quando precisamos simplificar uma configuração de border, padding, etc.</p>
+
+     <br>
+    <p>Na imagem abaixo podemos ver que ha muitas configurações que podemos fazer com cada item das caixas. Cheguei nesta tela clicando em 'inspecionar' (dev tools), depois na setinha  de itens como 'border' que são setadas automaticamente pelo user agent (navegador). </p>
+    <img src="imagens/devtools_configuracoes900px.png" alt="exemplos de configuracoes de borda, padding, etc.">
+</body>
+</html>

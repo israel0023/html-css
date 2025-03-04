@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal" class="destaque">Criando Sites com HTML e CSS</h1>
+
+    <h2>Explicação ID e Class</h2>
+    <p>Seletor personalizado é um seletor onde apenas ele será modificado com uma edição diferente dos demais iguais a ele. Por exemplo o H1 inicial deste site esta com edição diferente. Para isso usamos ID.</p>
+    <p>Para personalizar um seletor, é necessario identifica-lo  dentro da tag dele com um 'id'. </p>
+    <p>Exemplo: h1 id="principal">Criando Sites com HTML e CSS /h1> </p>
+    <p>Ja para modificarmos varios seletores com uma mesma edição diferenciada, usamos 'class'.</p>
+    <p>Exemplo: h2 class="basico">CSS basico /h2></p>
+    <h2>Informação Importante</h2>
+    <p>Para simplificar a explicação de como fazer um personalização de seletor, podemos fazer a criação como se fosse uma classe de orientaçãoa objetos e depois aplicamos no seletor que queremos personalizar.</p>
+    <Como> ID - Primeiro cria-se o seletor no CSS. Como aqui:</p>
+    <code>
+        h1#principal {
+            text-align: center;
+            background-color: beige;
+            color: blueviolet;   }
+    </code>
+    <p>Em seguida declaramos a id no seletor que queremos modificar: h1 id="principal">Criando Sites com HTML e CSS /h1> </p>
+    <p>CLASS - Primeiro cria-se o seletor no CSS. Como aqui:</p>
+    <p><code>
+            
+    .basico {
+        color: rgb(64, 188, 23);
+    }
+
+    .intermediario {
+    color: darkgoldenrod;
+    }
+
+    .avançado {
+        color: rgb(139, 14, 14);
+    }
+    </code></p>
+    <p>Em seguida, declaramos a class nos seletores que queremos modificar:  h2 class="basico">CSS basico /h2></p>
+    <p>Em HTML é id = em CSS é #</p>
+    <p>Em HTML é class = em CSS é .</p>
+    <p>Em HTML digitamos a tag para personalizar o seletor (id e class) e no CSS digitamos um caractere (# e .) seguido do nome escolhido para fazer a correspondencia do seletor.</p>
+    <h2>Observações</h2>
+    <p>Posso colocar duas ou mais classe num mesmo seletor, separando os nomes das class apenas por espaço. Exemplo: h2 class="avançado destaque">CSS Avançado /h2></p>
+    <p>Posso mesclar num mesmo seletor id e class, mas o id irá sobrepor as configurações da class na hierarquia. Exemplo: h1 id="principal" class="destaque">Criando Sites com HTML e CSS /h1></p>
+    <h1>Aprendendo HTML</h1>
+    <h2>HTML basico</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad iusto, totam eos repudiandae a corporis quae temporibus inventore cumque alias obcaecati tenetur quaerat, molestiae voluptatem nemo iste ullam aliquid consequuntur.</p>
+    <h2>HTML Intermediario</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut nemo illo aspernatur harum fugiat soluta consequatur amet voluptatibus. Quos voluptatem debitis cupiditate. Sit aliquam quaerat neque vel perspiciatis inventore!</p>
+    <h2>HTML Avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis fugiat, cupiditate consequatur eius quod libero culpa ut aut delectus corporis tempore iure quidem expedita. Officia eligendi expedita iste animi?</p>
+    <h1 class="destaque">Aprendendo CSS</h1>
+    <h2 class="basico">CSS basico</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad iusto, totam eos repudiandae a corporis quae temporibus inventore cumque alias obcaecati tenetur quaerat, molestiae voluptatem nemo iste ullam aliquid consequuntur.</p>
+    <h2 class="intermediario">CSS Intermediario</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut nemo illo aspernatur harum fugiat soluta consequatur amet voluptatibus. Quos voluptatem debitis cupiditate. Sit aliquam quaerat neque vel perspiciatis inventore!</p>
+    <h2 class="avançado destaque">CSS Avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis assumenda excepturi maxime rem ducimus id? Corrupti, ut aliquam. Minima quam eveniet obcaecati error distinctio temporibus amet rem adipisci sunt dolore.</p>
+
+    
+    
+</body>
+</html>

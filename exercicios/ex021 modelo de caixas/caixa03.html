@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda Personalizada
+    </title>
+    <style>
+        h1 {
+            border: 20px solid transparent;
+            padding: 10px;
+            border-image-source: url(imagens/borda.png);
+            border-image-slice: 31;
+            border-image-repeat: repeat;
+
+        }
+
+        h2 {
+            border: 20px solid transparent;
+            padding: 10px;
+            border-image-source: url(imagens/borda.png);
+            border-image-slice: 31;
+            /* border-image-repeat: repeat; */
+
+        }    
+        
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda</h1>
+    <h2>Explicações</h2>
+    <p>Criamos uma imagem com o aplicativo GIMP de bolinhas azuis com bolinhas vermelhas nas extremidades. Em seguida criamos a borda e setamso a cor para 'transparent' para ter mais acessibilidade com varios navegadores.</p>
+    <p>Com a tag 'BORDER-IMAGE-SOURCE' escolhemos a imagem de borda que queremos, depois com 'BORDER-IMAGE-SLICE' fizemos a borda meio que esticar, tambem pode ser feito com a tag 'BORDER-IMAGE-STRETCH', depois com 'BORDER-IMAGE-REPEAT' setamos repeat para repetir o desenho da borda.</p>
+    <p>Sem o border-image-repeat ficou ate melhor, mas para exemplo temos as configurações sem esta tag no elemento h2 (Explicações) desta pagina.</p>
+</body>
+</html>
