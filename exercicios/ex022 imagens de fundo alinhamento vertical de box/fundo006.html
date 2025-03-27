@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo fixo de tela</title>
+    <style>
+        body {
+        
+           /* background-color: black;
+            background-image: url(imagens/wallpaper002.jpg);
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed; */
+            height: 100vh;
+
+            background: black url(imagens/wallpaper002.jpg) repeat fixed;
+
+            background-size: cover;
+
+        /* Shorthand do background- 
+        background: color > image > position > repeat > size* > attachment 
+        Porem o size não funciona, por isso tem que ser colocad fora da shorthand. */
+
+
+
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid blue;
+            border-radius: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+        <h2>Explicações</h2>
+        <p>Importante: Nunca deixar o fundo sem uma cor de fundo, mesmo que se coloque uma imagem de fundo no site, pois se a imagem for grande, o carregamento vai demorar e o site ficará feio antes que a imagem carregue totalmente. Aqui foi usado o preto no fundo, mas acredito que a cor do fundo deve variar de acordo coma paleta de cor de cada site.</p>
+        <p>Para chegar neste resultado de fundo com a imagem cobrindo 100% da tela e se adaptando ao tamanho da viewport, foi usado 'cover' na tag backgroud-size. Este foi o unico parametro que ficou bom e nao mostrou as extremidades da tela sem imagem e cobriu tudo sem distorcer a imagem. Porém, alem disso, usei a tag height e 100vh (height: 100vh;) para aumentar a altura da imagem cobrindo sempre 100% da viewport.</p>
+        <P>Com a tag e parametro background-attachment: fixed; a imagem fica parada quando rolamos o conteudo para baixo. Isso faz com que a imagem fique bonita e naõ precise se repetir para caber no site, ja que o conteudo é que vai mudando de lugar.</P>
+        <h2>Shorthand</h2>
+        <p>O shorthand para background obedece o seguinte padrão:</p>
+        <p>color > image > position > repeat > size* > attachment</p>
+        <p>* Segundo o W3C, o size faz parte do shorthand,porem na pratica o size não funciona, por isso tem que ser colocado fora da shorthand. Vide codigo.</p>
+        <h2>Conteudo Lorem</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque ut culpa doloremque enim recusandae facere totam nihil. Ex iusto quod quas dolor, non sed neque odit, voluptates nesciunt laboriosam soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia placeat minus laudantium asperiores odit voluptatibus magnam molestiae officia illo neque voluptas fugit, eos recusandae voluptates commodi dolore eum assumenda voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt excepturi natus qui delectus expedita enim reprehenderit corporis. Numquam amet vitae distinctio culpa nobis laudantium consectetur excepturi, magni voluptate sit.
+         consectetur adipisicing elit. Atque ut culpa doloremque enim recusandae facere totam nihil. Ex iusto quod quas dolor, non sed neque odit, voluptates nesciunt laboriosam soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia placeat minus laudantium asperiores odit voluptatibus magnam molestiae officia illo neque voluptas fugit, eos recusandae voluptates commodi dolore eum assumenda voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt excepturi natus qui delectus expedita enim reprehenderit corporis. Numquam amet vitae distinctio culpa nobis laudantium consectetur excepturi, magni voluptate sit.consectetur adipisicing elit. Atque ut culpa doloremque enim recusandae facere totam nihil. Ex iusto quod quas dolor, non sed neque odit, voluptates nesciunt laboriosam soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia placeat minus laudantium asperiores odit voluptatibus magnam molestiae officia illo neque voluptas fugit, eos recusandae voluptates commodi dolore eum assumenda voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt excepturi natus qui delectus expedita enim reprehenderit corporis. Numquam amet vitae distinctio culpa nobis laudantium consectetur excepturi, magni voluptate sit.
+        </p>
+    </main>
+    
+</body>
+</html>
