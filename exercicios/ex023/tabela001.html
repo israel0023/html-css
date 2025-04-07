@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            border: 5px solid red;
+            height: 400px;
+
+        }
+
+        tr.linha {
+            background-color: gray;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center; /* alinhamento horizontal: left, center ou right */
+            vertical-align: middle; /* alinhamento vertical: top, middle ou bottom */
+        }
+
+        td.dado {
+            background-color: rgb(112, 112, 221);
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!--
+        HIERARQUIA DE TABELAS (simples)
+        TABLE =  tabela
+            TABLE ROW = linha de tabela
+                TABLE HEADER = cabeçalho de tabela
+                TABLE DATA = dado de tabela
+    -->
+    <table>
+        <tr> <!-- primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- segunda linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td class="numero">C2</td>
+        </tr>
+        <tr> <!-- terceira linha-->
+            <td>A3</td> 
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr>
+        <tr> <!-- quarta linha-->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+        
+    </table>
+
+    <h2>Tabela 2  </h2>
+    <table>
+        <tr> <!-- primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- segunda linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!-- terceira linha-->
+            <td>A3</td> 
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!-- quarta linha-->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+        <tr> <!-- quinta linha-->
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+        <tr> <!-- sexta linha-->
+            <td>A6</td>
+    </table>
+    
+    <h1>Explicações</h1>
+    <p>Tabelas são muito rígidas e exigem que sejam respeitadas em sua hierarquia. Caso algum dado seja colocado fora da hierarquia d tablea ou em local errado, ele será exibido acima ou abaixo da tabela e não dentro dela.</p>
+    <p>Podemos escrever as tags 'td' sem o fechamento, mas é recomendavel que sejam fechadas, ate porque o fechamento da tag  (/td) teria que ser apagado manualmente, gerando mais trabalho.</p>
+    <p>Para alinhar o texto dentro das celulas, usamos as tags 'text-align' para alinhamento horizontal: left, center ou right, e para alinhamento do texto na vertical usamos a tag vertical-align com top, middle ou bottom como parametros. No Excel, as celulas com numeros ja tem alinhamento à direita por padrão, porem no HTML isso tem que ser feito manualmente.  Aqui foi criada a classe .numero com 'text-align: right'.</p>
+    <p>Para adicionar celulas avulsas ou linhas e colunas incompletas, simplemente adicionamos celulas a menos dentro da linha.</p>
+    <h2> HIERARQUIA DE TABELAS (simples)</h2>
+        <p>TABLE =  tabela </p>
+        <p>TABLE ROW = linha de tabela</p> 
+        <p>TABLE HEADER = cabeçalho de tabela</p>
+        <p>TABLE DATA = dado de tabela</p>
+    <br>
+    <h2>Tabela para demonstração de erro</h2>
+    <table>
+        <tr> <!-- primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha">
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+            *Teste de escrita em local errado*
+        </tr>
+    </table>
+
+    
+</body>
+</html>
