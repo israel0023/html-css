@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes em HTML</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(119, 170, 246);    
+
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: gray;
+
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd) /* 2n-1 */
+        {
+            background-color: white;
+            /* font-weight: bold; */
+        }
+
+        tbody > tr:nth-child(even) /* 2n */
+        {
+            background-color: lightgrey;
+            /* text-decoration: underline; */
+        }
+
+
+
+       td.num {
+            text-align: right;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+    ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        THEAD
+            TR, TD, TH
+        TBODY
+             TR, TD, TH
+        TFOOT
+             TR, TD, TH
+    -->
+    <h1>Uso de tabelas grandes</h1>         
+    <table>
+        <caption>População das Unidades federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+
+        </thead>
+        
+            
+        <tbody>
+             <tr>
+                <td>São Paulo</td>
+                <td class="num">45.973.194</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.322.691</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.219.679</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.850.513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.824.665</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.229.915</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.539.029</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9.233.656</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.664.306</td>
+            </tr>
+            <tr>
+                <td>Santa catarina</td>
+                <td class="num">8.058.441</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7.350.483</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7.010.960</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4.281.209</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4.145.040</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4.102.129</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.836.399</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.446.071</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.375.646</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.220.104</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2.982.818</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.901.895</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.291.077</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.746.227</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.577.342</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">880.631</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">802.837</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">716.793</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td class="num">212.583.750</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h1>Explicações</h1>
+    <h2>Tag CAPTION</h2>
+    <p>Abaixo do primeiro H1 há uma tag chamada 'CAPTION' onde vemos os dizeres 'População das Unidades Federativas'. O efeito desta tag no site fica semelhante a um título, porém o correto a se traduzir de caption é 'legenda'. Colocamos aqui algumas configurações de estilo para que a tag ficasse da forma como está, mas quando ela aparece inicialmente, o texto da tag fica bem pequeno, realmente parecendo apenas uma legenda.</p>
+    <H2>Tag style exclusiva dentro do texto/html</H2>
+    <p>IMPORTANTE: Dentro da tag TH do título 'população' há uma tag style de CSS exclusiva, onde setamos esta coluna para ter 50 pixels. Para isso, setamos a tabela inteira para 400px e depois de setar a tag CSS de largura avulsa nesta coluna,  a mesma fica com 50px e o restante da tabela fica com os 350px restantes do tamanho total.</p>
+    <p>Outro ponto importante é setar cada coluna e cada linha adequadamente com a tag SCOPE, assim configurando semânticamente a tabela e melhorando os site de varias formas.</p>
+    <h2>Efeito zebrado (configuração para linhas separadamente)</h2>
+    <p>Para fazer o efeito zebrado usamos uma pseudo-classe chamada 'NTN-CHILD', com parametro '(odd)', que significa 'ímpar' ou '(even)', que significa 'par'. Ao inves disso podemos usar tambem '2n-1' para fazer o ímpar ou '2n' para fazer o par, porem usar odd ou even é mais simples, mas o 2n é usado para alterar a configuração a cada 2 linhas, 3n para cada 3 linhas, 4n para cada 4 linhas e assim por diante. </p>
+    <p> Podemos colocar qualquer cor e tambem qualquer configuração, mas quando a tabela ja tem a cor de fundo que queremos, só precisamos setar a cor para as linhas com a segunda cor desejada, aqui neste caso, a cor cinza, pois o branco ja é a cor de fundo. </p>
+
+    <h2>Cabeçalho fixo de tabela</h2>
+    <p>Importante: Não funciona no Safari. Funciona apenas em navegadores baseados no Chrome, mas com certeza isso vai ser expandido com o passar do tempo.</p>
+    <p>Primeiramente setamos a posição da tabela com POSITION: RELATIVE;, depois colocamos um seletor para escolher o TH  que esta na TR que esta no cabeçalho: THEAD > TR > TH { } e para este seletor setamos as configurções:  POSTION: STICKY;, TOP -1px; e BACKGROUND-COLOR: 'mesma cor do cabeçalho'.</p>
+    <P>Isso fara com que o texto do cabeçalho da tabela grude no topo e não desça junto com a rolagem da tabela, mas é preciso colocar um bakground-color da mesma cor do cabeçalho junto, se não apenas as letras irão ficar fixas e não dará o efeito desejado.</P>
+</body>
+</html>
+
