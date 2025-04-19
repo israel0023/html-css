@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela (Colgroup)</title>
+   <style>
+          table {
+            width: 500px;
+            border-collapse: collapse;
+          }  
+
+          th, td {
+            border: 1px solid black;
+            padding: 5px;
+          }
+
+          /* MANEIRA1 */
+          col.cgrupo {
+            background-color: lightblue;
+          }
+
+          col.cnome, .csexo {
+            background-color: lightcoral;
+          }
+
+          /* MANEIRA2 */
+           .azul {
+            background-color: blue;
+          }
+
+          .gray {
+            background-color: gray;
+          } 
+
+
+   </style>
+</head>
+<body>
+    <h1>Exercicio de Tabela</h1>
+    <table>
+        <!-- MANEIRA1 -->
+            <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cgrupo" span="3">
+            <!-- <col class="cprofisao">
+            <col class="cestadicivil">
+            <col class="cempregado">  -->
+        </colgroup> 
+
+
+        <caption>
+            Cadastro 1
+        </caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>profissão</th>
+                <th>Estado Civil</th>
+                <th>Empregado</th>  
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>F</td>
+                    <td>25</td>
+                    <td>Jornalista</td>
+                    <td>S</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Claudio</td>
+                    <td>M</td>
+                    <td>28</td>
+                    <td>Programador</td>
+                    <td>C</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Gustavo</td>
+                    <td>M</td>
+                    <td>42</td>
+                    <td>Professor</td>
+                    <td>C</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Helio</td>
+                    <td>M</td>
+                    <td>19</td>
+                    <td>Vendedor</td>
+                    <td>S</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Maria Luísa</td>
+                    <td>F</td>
+                    <td>23</td>
+                    <td>Médica</td>
+                    <td>S</td>
+                    <td>S</td>
+                </tr>
+
+
+               
+
+
+            </tbody>
+        
+    </table>
+<br>
+    <table>
+     
+        <!-- MANEIRA2 - outra maneira de selecionar varias colunas e tambem fazer colunas zebradas -->
+         <colgroup>
+            <col class="azul">
+            <col class="gray">
+            <col class="azul">
+            <col class="gray">
+            <col class="azul">
+            <col class="gray">
+        </colgroup>
+
+        <caption>
+            Cadastro 2
+        </caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>profissão</th>
+                <th>Estado Civil</th>
+                <th>Empregado</th>  
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>Ana Maria</td>
+                    <td>F</td>
+                    <td>25</td>
+                    <td>Jornalista</td>
+                    <td>S</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Claudio</td>
+                    <td>M</td>
+                    <td>28</td>
+                    <td>Programador</td>
+                    <td>C</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Gustavo</td>
+                    <td>M</td>
+                    <td>42</td>
+                    <td>Professor</td>
+                    <td>C</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Helio</td>
+                    <td>M</td>
+                    <td>19</td>
+                    <td>Vendedor</td>
+                    <td>S</td>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <td>Maria Luísa</td>
+                    <td>F</td>
+                    <td>23</td>
+                    <td>Médica</td>
+                    <td>S</td>
+                    <td>S</td>
+                </tr>
+
+
+               
+
+
+            </tbody>
+        
+    </table>
+    <h2>Explicações</h2>
+    <p>Para configurar uma coluna inteira usamos a tag COLGROUP em qualquer lugar do codigo, aqui foi criado no inicio do codigo. Em seguida criamos uma tag COL dentro do grupo para cada coluna que queremos modificar e criamos uma CLASS ou ID para configura-la.</p>
+    <p>Podemos fazer a configuração de 2 maneiras: </p>
+    <p>Na primeira forma (Cadastro 1), criamos uma COL para cada coluna e nomeamos cada uma com uma CLASS, depois configuramos as CLASS como queremos.</p>
+    <p>Já na segunda (Cadastro 2), criamos 2 classes com cores diferentes, depois criamos uma COL para cada coluna setando a class com a cor desejada para cada coluna. Desse jeito criamos o efeito zebrado nas colunas.</p>
+</body>
+</html>
