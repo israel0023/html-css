@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium corrupti consequatur, quibusdam iste labore aliquam non sint, laudantium nobis laboriosam eveniet magni facilis unde nemo sapiente? Accusantium, consectetur omnis.</p>
+
+    <iframe src="pagina001.html" frameborder="0" height="500" width="500"></iframe>
+
+
+    <h1>Explicações</h1>
+    <p>Importante: A tag 'margin: auto;' não funciona em elementos inline-level. Por isso adicionamos um 'display: block;', assim a configuração da margem irá funcionar, ja que agora o elemento se torna box-level. Por isso conseguimos colocar o iframe no meio da tela usando a tag 'margin'.</p>
+    <p>De acordo com o prof Guanabara, neste caso aqui onde estamos utilizando uma tabela como exemplo, seria mais adequado usar uma div com uma tag 'overflow-x ou overflow-y' para mostrar e setar esta tabela. Isso por conta do google ter um problema de indexação na busca por conteudo com iframe. Porem como este exemplo é só pra mostrar como usar uma pagina local dentro do iframe, isso não será problema por aqui. Alem disso, apenas para informação, há uma certa vantagem para configurar o CSS desta forma, pois o iframe permite que configuremos o estilo de forma separada.</p>
+    <p>Em aulas futuras será explicado mais sobre indexação de busca para paginas com iframe.</p>
+</body>
+</html>
