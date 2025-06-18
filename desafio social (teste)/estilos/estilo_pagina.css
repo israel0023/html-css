@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
